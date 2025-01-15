@@ -1,4 +1,4 @@
-Submissions for Online Test by TymeX
+## Challenge 2: Missing Number Finder
 
 This repository contains my solutions for the TymeX Mobile Developer Internship Program.
 
