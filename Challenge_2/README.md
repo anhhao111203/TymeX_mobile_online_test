@@ -1,4 +1,4 @@
-# Mobile Internship Program: Submissions for Online Test by TymeX
+Submissions for Online Test by TymeX
 
 This repository contains my solutions for the TymeX Mobile Developer Internship Program.
 
