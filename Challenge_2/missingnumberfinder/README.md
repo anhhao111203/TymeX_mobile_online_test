@@ -1,20 +1,22 @@
-# Mobile Internship Program: Submissions for Online Test by TymeX
+# Missing Number Finder
 
-This repository contains my solutions for the TymeX Mobile Developer Internship Program.
+This Kotlin program determines the missing number in a sequence of integers. It's used to calculate the missing number from an array of integers ranging from 1 to n, where one number is missing.
 
-## Table of Contents
+---
 
-- [Challenge 1: Currency Converter Application](#challenge-1-currency-converter-application)
-- [Challenge 2: Problem Solving](#challenge-2-problem-solving)
-  - [Question 1: Product Inventory Management](#question-1-product-inventory-management)
-  - [Question 2: Missing Number Finder](#question-2-missing-number-finder)
+## Overview
 
-## Challenge 1: Currency Converter Application
-A basic application to convert currencies in real-time using the ExchangeRateAPI.
+The **Missing Number Finder** program computes the missing number in a given integer array. For example, if the array contains numbers from 1 to n with one number missing, the program will identify and output the missing number.
 
-## Challenge 2: Problem Solving
-### Question 1: Product Inventory Management
-A Product Inventory Management system used to manage products, sort them, and check product availability, etc.
+---
+## Example
 
-### Question 2: Missing Number Finder
-A function to find the missing number from a given array.
+Here is an example of how the program works:
+
+```kotlin
+fun main() {
+    val numsArray = intArrayOf(3, 7, 1, 2, 6, 4)
+    val missingNumber = findMissingNumber(numsArray)
+    println("The missing number is: $missingNumber")  // Output: 5
+}
+
