@@ -1,6 +1,6 @@
 # Currency Converter Application
 
-A modern **Currency Converter App** built using Kotlin,Jetpack Compose and ExchangeRateAPI, which allows users to convert between currencies. 
+A modern **Currency Converter App** built using Kotlin,Jetpack Compose and ExchangeRateAPI, which allows users to convert between currencies. This app also includes multiple test cases to ensure the core functionality is implemented accurately.
 
 ---
 
@@ -25,11 +25,3 @@ Check out the demo video of the app:
 2. Open in Android Studio.
 3. Build and run the app.
 
-## Implementation Details
-
-### **Key Components**
-- **Live Exchange Rates**:
-  - Integrated `ViewModel` to fetch and manage exchange rate data.
-  - Handled network connectivity changes using `isNetworkAvailable()`.
-- **Composable UI**:
-  - Designed modular components for dropdowns, text fields, and buttons using Jetpack Compose.
