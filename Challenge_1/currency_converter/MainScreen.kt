@@ -19,31 +19,50 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.currency_converter.data.network_check.isNetworkAvailable
+import com.example.currency_converter.viewmodel.ExchangeRateViewModel
 
 @Composable
 fun CurrencyConverterApp(
-    modifier: Modifier = Modifier,
-    viewModel: ExchangeRateViewModel,
-    context: Context
+    modifier: Modifier = Modifier, // Optional parameter for applying layout and styling
+    viewModel: ExchangeRateViewModel, // ViewModel to manage exchange rate data
+    context: Context // Context for displaying Toast messages
 ) {
+    // State variable to track whether the source currency dropdown is expanded:
     var expandedSource by remember { mutableStateOf(false) }
+
+    // State variable to track whether the target currency dropdown is expanded:
     var expandedTarget by remember { mutableStateOf(false) }
+
+    // State variable to store the amount to be converted (input by the user):
     var fromAmount by remember { mutableStateOf("") }
+
+    // State variable to store the currently selected source currency (default: USD):
     var selectedSourceCurrency by remember { mutableStateOf("USD") }
+
+    // State variable to store the currently selected target currency (default: VND):
     var selectedTargetCurrency by remember { mutableStateOf("VND") }
+
+    // State variable to store the result of the currency conversion:
     var convertedAmount by remember { mutableStateOf("") }
+
+    // Collects the exchange rates from the ViewModel as a state to be used in the UI:
     val exchangeRates by viewModel.exchangeRates.collectAsState()
+
+    // Collects any error messages from the ViewModel as a state:
     val error by viewModel.error.collectAsState()
 
+    // State variable to track the network connectivity status:
     var isConnected by remember { mutableStateOf(isNetworkAvailable(context)) }
 
-    // Trigger refresh when network changes or on click
+    // Trigger refresh when network changes or on click:
     LaunchedEffect(isConnected) {
         if (isConnected) {
             viewModel.fetchExchangeRates()
         }
     }
 
+    // List of currency codes to be used in the dropdown menus:
     val currencyCodeList = exchangeRates.keys.toList()
 
     Box(
@@ -52,6 +71,7 @@ fun CurrencyConverterApp(
             .padding(16.dp)
             .fillMaxSize()
     ) {
+        // If there's an error, display a message with a refresh button:
         if (error != null || !isConnected) {
             Column(
                 modifier = modifier.fillMaxSize(),
