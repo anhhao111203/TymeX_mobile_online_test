@@ -1,20 +1,25 @@
-# Mobile Internship Program: Submissions for Online Test by TymeX
+# Product Inventory Management
 
-This repository contains my solutions for the TymeX Mobile Developer Internship Program.
+This Kotlin program manages a product inventory by allowing you to calculate the total inventory value, find the most expensive product, check if a product is in stock, and sort the inventory by price or quantity in both ascending and descending order.
 
-## Table of Contents
+---
 
-- [Challenge 1: Currency Converter Application](#challenge-1-currency-converter-application)
-- [Challenge 2: Problem Solving](#challenge-2-problem-solving)
-  - [Question 1: Product Inventory Management](#question-1-product-inventory-management)
-  - [Question 2: Missing Number Finder](#question-2-missing-number-finder)
+## Overview
 
-## Challenge 1: Currency Converter Application
-A basic application to convert currencies in real-time using the ExchangeRateAPI.
+The **Product Inventory Management** program helps keep track of products, their prices, and quantities in stock. It allows you to:
+- Calculate the total inventory value.
+- Find the most expensive product.
+- Check the availability of specific products.
+- Sort the inventory by price or quantity in either ascending or descending order.
 
-## Challenge 2: Problem Solving
-### Question 1: Product Inventory Management
-A Product Inventory Management system used to manage products, sort them, and check product availability, etc.
+---
 
-### Question 2: Missing Number Finder
-A function to find the missing number from a given array.
+## Features
+
+- **Calculate Total Inventory Value**: Sums up the prices of all products based on their quantity.
+- **Find Most Expensive Product**: Identifies the product with the highest price.
+- **Check Product Availability**: Determines whether a product is in stock based on its quantity.
+- **Sort Inventory**: Allows sorting the inventory by product price or quantity in both ascending and descending order.
+
+
+
