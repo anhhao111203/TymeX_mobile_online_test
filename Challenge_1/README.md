@@ -1,20 +1,35 @@
-# Mobile Internship Program: Submissions for Online Test by TymeX
+# Currency Converter Application
 
-This repository contains my solutions for the TymeX Mobile Developer Internship Program.
+A modern **Currency Converter App** built using Kotlin,Jetpack Compose and ExchangeRateAPI, which allows users to convert between currencies. 
 
-## Table of Contents
+---
 
-- [Challenge 1: Currency Converter Application](#challenge-1-currency-converter-application)
-- [Challenge 2: Problem Solving](#challenge-2-problem-solving)
-  - [Question 1: Product Inventory Management](#question-1-product-inventory-management)
-  - [Question 2: Missing Number Finder](#question-2-missing-number-finder)
+## Features
 
-## Challenge 1: Currency Converter Application
-A basic application to convert currencies in real-time using the ExchangeRateAPI.
+- 🌍 **Live Currency Conversion**: Convert between various currencies based on real-time exchange rates.
+- 📱 **Intuitive UI**: Simple and user-friendly interface designed with Jetpack Compose.
+- 🛠 **Offline Support**: Provides feedback for network issues and retries fetching data.
+- 🔄 **Currency Swapping**: Swap between source and target currencies with a single tap.
 
-## Challenge 2: Problem Solving
-### Question 1: Product Inventory Management
-A Product Inventory Management system used to manage products, sort them, and check product availability, etc.
+---
 
-### Question 2: Missing Number Finder
-A function to find the missing number from a given array.
+## Video Demo
+
+Check out the demo video of the app:
+
+[Currency Converter App Demo](https://www.youtube.com/shorts/9gChdLadip4)
+
+## How to Run
+
+1. Clone the repository.
+2. Open in Android Studio.
+3. Build and run the app.
+
+## Implementation Details
+
+### **Key Components**
+- **Live Exchange Rates**:
+  - Integrated `ViewModel` to fetch and manage exchange rate data.
+  - Handled network connectivity changes using `isNetworkAvailable()`.
+- **Composable UI**:
+  - Designed modular components for dropdowns, text fields, and buttons using Jetpack Compose.
